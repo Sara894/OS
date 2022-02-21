@@ -1,0 +1,15 @@
+#! /bin/bash
+echo "Данная программа считывает целые числа с клавиатуры,
+пока не будет введено четное число."
+count=1
+read a
+while [[ "$a"%2 != 0 ]]
+do read a
+let count=$count+1
+let m=$a%2
+if [[ "$m" == "0" ]]; then
+	break
+fi
+done
+echo "Количество чисел всего:"
+echo "$count"

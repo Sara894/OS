@@ -1,0 +1,21 @@
+#1 /bin/bash
+echo "Скрипт выдает максимальное из трех чисел."
+echo "========================================="
+echo "Введите три целых числа через пробел:"
+read a b c
+echo "a = $a"
+echo "b = $b"
+echo "c = $c"
+if [ $a -gt $b ]; then
+	if [ $a -gt $c ]; then
+		echo "$a наибольшее"
+	else
+		echo "$c наибольшее"
+	fi
+else 
+	if [ $b -gt $c ]; then
+		echo "$b наибольшее"
+	else
+		echo "$c наибольшее"
+	fi
+fi
